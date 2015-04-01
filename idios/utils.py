@@ -9,7 +9,9 @@ modified for Eldarion standards.
 """
 from django import forms
 
-from django.contrib.auth.models import SiteProfileNotAvailable
+
+class SiteProfileNotAvailable(Exception):
+    silent_variable_failure = True
 
 
 def get_profile_base():
